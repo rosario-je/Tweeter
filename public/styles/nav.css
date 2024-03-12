@@ -4,6 +4,7 @@ nav{
   flex-direction: row;
   justify-content: space-between;
   background-color: #4056A1;
+  color: #FFFFFF;
   height: 120px;
   width: 100%;
 }
@@ -16,7 +17,6 @@ nav:first-of-type{
   padding-right: 1.5em;
   font-family: "Bungee", sans-serif;
   font-style: normal;
-  color: #FFFFFF;
 }
 
 nav div {
@@ -24,7 +24,6 @@ nav div {
   flex-direction: column; 
   align-items: center; 
   justify-content: center;
-  color: #FFFFFF;
   font-family: "Source Sans 3", sans-serif;
 }
 
