@@ -2,6 +2,7 @@
 nav{
   display: flex;
   flex-direction: row;
+  position: fixed;
   justify-content: space-between;
   background-color: #4056A1;
   color: #FFFFFF;
