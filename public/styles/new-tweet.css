@@ -17,6 +17,8 @@
   width: 100%;
   background-color: transparent;
   resize: none;
+  padding-bottom: 20px;
+  
 }
 
 .button-counter {
