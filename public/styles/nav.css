@@ -1,18 +1,17 @@
-
-nav{
+nav {
   display: flex;
   flex-direction: row;
   position: fixed;
   top: 0;
   z-index: 1;
   justify-content: space-between;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #4056a1;
+  color: #ffffff;
   height: 120px;
   width: 100%;
 }
 
-nav:first-of-type{
+nav:first-of-type {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,12 +23,13 @@ nav:first-of-type{
 
 nav div {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   font-family: "Source Sans 3", sans-serif;
+  font-style: normal;
 }
 
-.fa-angle-double-down{
+.fa-angle-double-down {
   color: orange;
 }
