@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -27,7 +29,6 @@ main {
   margin: 0 auto; /* Key change for centering */
   background-color: inherit;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
