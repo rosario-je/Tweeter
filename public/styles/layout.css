@@ -26,7 +26,7 @@ body {
 }
 main {
   width: 90%;
-  margin: 0 auto; /* Key change for centering */
+  margin: 0 auto; 
   background-color: inherit;
 }
 
