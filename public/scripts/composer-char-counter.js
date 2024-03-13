@@ -6,5 +6,10 @@ $(document).ready(function() {
     let remaining = maxLength - currentLength;
 
     $('.counter').text(remaining); 
+    if (remaining < 15) {
+      $('.counter').addClass('counter-red');
+    } else {
+      $('.counter').removeClass('counter-red');
+    }
   }); 
 });
