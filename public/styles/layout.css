@@ -22,7 +22,11 @@ body {
   font-optical-sizing: auto;
   font-style: italic;
 }
-
+main {
+  width: 90%;
+  margin: 0 auto; /* Key change for centering */
+  background-color: #f4f1ec;
+}
 
 
 /*
