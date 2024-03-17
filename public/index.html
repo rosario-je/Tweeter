@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -41,7 +42,7 @@
       <i class="fa-solid fa-angle-double-down"></i>
     </div>
   </nav>
-  <header>
+  <header class="current-user">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -62,6 +63,31 @@
         </div>
       </form>
     </section>
+    
+    <section class="tweets-feed">
+
+      <article>
+        <header>
+          <div class="user-profile">
+            <i class="fa-solid fa-user"></i>
+            <h3>Jose Eduardo</h3>
+          </div>
+          <h3>@k-otick</h3>
+        </header>
+        <div class="user-tweet">
+          If I have seen further it is by standing on the shoulders of giants
+        </div>
+        <footer>
+          <h4>10 days ago</h4>
+          <div>
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+    </section>
+
 
   </main>
 </body>
