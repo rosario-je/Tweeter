@@ -1,8 +1,8 @@
-.tweet{
+.tweet-section{
   padding-top: 1.5em;
 }
 
-article {
+.tweet {
   border: solid black;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -25,7 +25,6 @@ article header {
 
 .tweet header span {
   display: flex;
-  flex-direction: row;
 }
 
 article footer {
