@@ -1,0 +1,57 @@
+.tweets-feed:hover{
+  box-shadow: 10px 10px 5px grey;
+}
+
+
+article{
+  border: solid black;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  
+}
+
+article header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article header div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-tweet{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-profile{
+  display: flex;
+  flex-direction: row;
+}
+
+article footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: solid black;
+}
+
+article footer div{
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.fa-flag:hover{
+  color: orange;
+}
+.fa-retweet:hover{
+  color: green;
+}
+.fa-heart:hover{
+  color: red;
+}
