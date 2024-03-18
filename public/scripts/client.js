@@ -5,37 +5,42 @@
  */
 // const $tweet = $(`<article class="tweet">Hello world</article>`);
 
-$(document).ready(function() {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-  
+$(document).ready(function () {
+
+  /* -----------------------DATABASE-----------------------*/
+  // const data = [
+  //   {
+  //     "user": {
+  //       "name": "Newton",
+  //       "avatars": "https://i.imgur.com/73hZDYK.png"
+  //       ,
+  //       "handle": "@SirIsaac"
+  //     },
+  //     "content": {
+  //       "text": "If I have seen further it is by standing on the shoulders of giants"
+  //     },
+  //     "created_at": 1461116232227
+  //   },
+  //   {
+  //     "user": {
+  //       "name": "Descartes",
+  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //       "handle": "@rd"
+  //     },
+  //     "content": {
+  //       "text": "Je pense , donc je suis"
+  //     },
+  //     "created_at": 1461113959088
+  //   }
+  // ]
+
   /*-------------------Function to create each tweet article-------------------*/
-  
+
+
   const createTweetElement = (tweet) => {
-    const {user: { name, handle }, content:{ text }, created_at } = tweet
-  
+    const { user: { name, handle }, content: { text }, created_at } = tweet
+
+
     let $tweet = $(`
       <article class="tweet">
           <header>
@@ -58,15 +63,61 @@ $(document).ready(function() {
     `)
     return $tweet;
   }
-  
-  const renderTweets = (tweets) =>{
-    for (const tweet of tweets){
+
+  const renderTweets = (tweets) => {
+    for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('.tweet-section').prepend($tweet); 
+      $('.tweet-section').prepend($tweet);
     }
   }
-  renderTweets(data);
+  //renderTweets(data);
+
+  
+  $('.new-tweet-form').on("submit", function ( event ) {
+    event.preventDefault();
+    const textCounter = $('#tweet-text');
+    const textLength = textCounter.val().trim().length;
+
+    if (textLength === 0){
+      alert("Please enter a tweet");
+      return;
+    }
+    if (textLength > 140){
+      alert("Only less than 140 characters allowed");
+      return;
+    }
+
+    let formData = $( this ).serialize();
+    console.log(formData)
+    
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: formData,
+      success: (response) => {
+        console.log(response);
+        loadTweets();
+      }
+    });
+  })
+  
+  const loadTweets = () => {
+
+    $.ajax({
+      url: '/tweets',
+      type: 'GET',
+      success: (res) => {
+        renderTweets(res)
+      },
+    });
+  }
+  loadTweets()
+  
+
+
+
+
 });
 
-/* -----------------------DATABASE-----------------------*/
+
 
