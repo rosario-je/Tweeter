@@ -1,15 +1,22 @@
 .tweet-section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
 }
 
 .tweet {
+  transition: box-shadow .3s;
   border: solid black;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 0 11px 11px grey; 
 }
 
 article header {
