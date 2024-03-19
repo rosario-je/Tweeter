@@ -33,6 +33,23 @@ $(document).ready(function () {
   //     "created_at": 1461113959088
   //   }
   // ]
+/* -----------------------Tweet Checker Function-----------------------*/
+  function isTweetValid(tweetText) {
+    const textLength = tweetText.trim().length;
+  
+    if (textLength === 0) {
+      alert("Please enter a tweet");
+      return false;
+    }
+  
+    if (textLength > 140) {
+      alert("Only less than 140 characters allowed");
+      return false;
+    }
+  
+    return true;
+  }
+
 
   /*-------------------Function to create each tweet article-------------------*/
   const createTweetElement = (tweet) => {
@@ -78,17 +95,11 @@ $(document).ready(function () {
     //Prevent regular form submission from happening
     event.preventDefault();
     const inputText = $('#tweet-text');
-    const textLength = inputText.val().trim().length;
+    
+    if (!isTweetValid(inputText.val())) {
+      return;
+    }
 
-    //Form validation
-    if (textLength === 0){
-      alert("Please enter a tweet");
-      return;
-    }
-    if (textLength > 140){
-      alert("Only less than 140 characters allowed");
-      return;
-    }
     let formData = $( this ).serialize();
     
     //POST request sending serialized text as data
