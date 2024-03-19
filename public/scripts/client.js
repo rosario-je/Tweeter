@@ -39,6 +39,7 @@ $(document).ready(function () {
 
   const createTweetElement = (tweet) => {
     const { user: { name, handle }, content: { text }, created_at } = tweet
+ 
 
 
     let $tweet = $(`
@@ -70,10 +71,11 @@ $(document).ready(function () {
       $('.tweet-section').prepend($tweet);
     }
   }
-  //renderTweets(data);
 
+  /* ----------------Form's Post request---------------- */
   
   $('.new-tweet-form').on("submit", function ( event ) {
+    //Prevent regular form submission from happening
     event.preventDefault();
     const textCounter = $('#tweet-text');
     const textLength = textCounter.val().trim().length;
@@ -90,6 +92,7 @@ $(document).ready(function () {
     let formData = $( this ).serialize();
     console.log(formData)
     
+    //POST request sending serialized text as data
     $.ajax({
       type: "POST",
       url: "/tweets",
@@ -101,8 +104,8 @@ $(document).ready(function () {
     });
   })
   
+  //Get request function
   const loadTweets = () => {
-
     $.ajax({
       url: '/tweets',
       type: 'GET',
@@ -112,8 +115,6 @@ $(document).ready(function () {
     });
   }
   loadTweets()
-  
-
 
 
 
