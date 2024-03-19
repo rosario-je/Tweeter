@@ -5,8 +5,10 @@ $(document).ready(function() {
     let currentLength = $(this).val().length;
     let remaining = maxLength - currentLength;
 
+    //Check the number of characters left
     $('.counter').text(remaining); 
     if (remaining < 15) {
+      //Add or remove a class to the counter class to allow conditional CSS Styling
       $('.counter').addClass('counter-red');
     } else {
       $('.counter').removeClass('counter-red');

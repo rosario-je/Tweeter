@@ -35,8 +35,6 @@ $(document).ready(function () {
   // ]
 
   /*-------------------Function to create each tweet article-------------------*/
-
-
   const createTweetElement = (tweet) => {
     const { user: { name, handle }, content: { text }, created_at } = tweet
     const timeAgoString = timeago.format(created_at);
@@ -74,14 +72,15 @@ $(document).ready(function () {
     }
   }
 
+
   /* ----------------Form's Post request---------------- */
-  
   $('.new-tweet-form').on("submit", function ( event ) {
     //Prevent regular form submission from happening
     event.preventDefault();
-    const textCounter = $('#tweet-text');
-    const textLength = textCounter.val().trim().length;
+    const inputText = $('#tweet-text');
+    const textLength = inputText.val().trim().length;
 
+    //Form validation
     if (textLength === 0){
       alert("Please enter a tweet");
       return;
@@ -90,9 +89,7 @@ $(document).ready(function () {
       alert("Only less than 140 characters allowed");
       return;
     }
-
     let formData = $( this ).serialize();
-    console.log(formData)
     
     //POST request sending serialized text as data
     $.ajax({
@@ -104,9 +101,11 @@ $(document).ready(function () {
         loadTweets();
       }
     });
+    //Clear input from text area after submit
+    $('#tweet-text').val('');
   })
   
-  //Get request function
+  /*-------------------Get request function-------------------*/
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
