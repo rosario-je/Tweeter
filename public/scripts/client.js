@@ -3,59 +3,14 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const $tweet = $(`<article class="tweet">Hello world</article>`);
 
 $(document).ready(function () {
-
-  /* -----------------------DATABASE-----------------------*/
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd"
-  //     },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
-/* -----------------------Tweet Checker Function-----------------------*/
-  function isTweetValid(tweetText) {
-    const textLength = tweetText.trim().length;
-  
-    if (textLength === 0) {
-      alert("Please enter a tweet");
-      return false;
-    }
-  
-    if (textLength > 140) {
-      alert("Only less than 140 characters allowed");
-      return false;
-    }
-  
-    return true;
-  }
-
 
   /*-------------------Function to create each tweet article-------------------*/
   const createTweetElement = (tweet) => {
     const { user: { name, handle }, content: { text }, created_at } = tweet
     const timeAgoString = timeago.format(created_at);
-
+    
 
     let $tweet = $(`
       <article class="tweet">
@@ -90,18 +45,19 @@ $(document).ready(function () {
   }
 
 
+
   /* ----------------Form's Post request---------------- */
-  $('.new-tweet-form').on("submit", function ( event ) {
+  $('.new-tweet-form').on("submit", function (event) {
     //Prevent regular form submission from happening
     event.preventDefault();
     const inputText = $('#tweet-text');
-    
+
     if (!isTweetValid(inputText.val())) {
       return;
     }
 
-    let formData = $( this ).serialize();
-    
+    let formData = $(this).serialize();
+
     //POST request sending serialized text as data
     $.ajax({
       type: "POST",
@@ -109,26 +65,26 @@ $(document).ready(function () {
       data: formData,
       success: (response) => {
         console.log(response);
-        loadTweets();
+        loadTweets()
+        //Clear input from text area after submit
+        $('#tweet-text').val('');
       }
     });
-    //Clear input from text area after submit
-    $('#tweet-text').val('');
+
   })
-  
+
   /*-------------------Get request function-------------------*/
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
       type: 'GET',
       success: (res) => {
+        $('.tweet-section').empty();
         renderTweets(res)
       },
     });
   }
   loadTweets()
-
-
 
 });
 
