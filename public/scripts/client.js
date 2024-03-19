@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   const createTweetElement = (tweet) => {
     const { user: { name, handle }, content: { text }, created_at } = tweet
- 
+    const timeAgoString = timeago.format(created_at);
 
 
     let $tweet = $(`
@@ -53,7 +53,9 @@ $(document).ready(function () {
           </header>
           <section class="tweet-text">${text}</section>
           <footer>
-            <span>${created_at}</span>
+          <div class="timeago">
+            ${timeAgoString}
+          </div>
             <div class="icons">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
