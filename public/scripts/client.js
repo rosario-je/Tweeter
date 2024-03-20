@@ -34,6 +34,8 @@ $(document).ready(function () {
           </footer>
         </article>
     `)
+
+    $tweet.find('.tweet-text').text(text);
     return $tweet;
   }
 
