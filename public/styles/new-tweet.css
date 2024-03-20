@@ -10,6 +10,7 @@
   font-style: normal;
   font-weight: 800;
   padding-bottom: 10px;
+  padding-top: 10px
 }
 
 .new-tweet-form textarea {
@@ -46,5 +47,5 @@
   align-items: center;
   border: solid red;
   padding: 20px;
-  font-weight: 800;
+  font-weight: bolder;
 }
