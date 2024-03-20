@@ -1,16 +1,19 @@
+
+
 /* -----------------------Tweet Checker Function-----------------------*/
+
 function isTweetValid(tweetText) {
   const textLength = tweetText.trim().length;
 
   if (textLength === 0) {
-    alert("Please enter a tweet");
+    $('#error-message').text('Tweet cannot be empty.').slideDown();
     return false;
   }
 
   if (textLength > 140) {
-    alert("Only less than 140 characters allowed");
+    $('#error-message').text('Tweet exceeds maximum length of 140 characters.').slideDown();
     return false;
   }
-
+  $('#error-message').slideUp();
   return true;
 }

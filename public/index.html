@@ -63,6 +63,8 @@
   <!-- HTML FORM FOR NEW TWEETS -->
   <main class="container">
     <section class="new-tweet">
+      <div id="error-message" style="display: none;">
+      </div>  
       <form class="new-tweet-form" action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea rows="1px" name="text" id="tweet-text" placeholder="Write something"></textarea>

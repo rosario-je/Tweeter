@@ -54,6 +54,7 @@ $(document).ready(function () {
     event.preventDefault();
     const inputText = $('#tweet-text');
 
+    $('#error-message').slideUp(); 
     if (!isTweetValid(inputText.val())) {
       return;
     }
