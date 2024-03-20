@@ -53,8 +53,7 @@ $(document).ready(function () {
     //Prevent regular form submission from happening
     event.preventDefault();
     const inputText = $('#tweet-text');
-
-    $('#error-message').slideUp(); 
+    
     if (!isTweetValid(inputText.val())) {
       return;
     }
@@ -82,6 +81,7 @@ $(document).ready(function () {
       url: '/tweets',
       type: 'GET',
       success: (res) => {
+        //Prevent duplicate render of tweets
         $('.tweet-section').empty();
         renderTweets(res)
       },
