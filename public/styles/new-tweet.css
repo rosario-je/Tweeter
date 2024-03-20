@@ -39,3 +39,12 @@
 .counter-red{
   color: red;
 }
+
+#error-message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid red;
+  padding: 20px;
+  font-weight: 800;
+}
