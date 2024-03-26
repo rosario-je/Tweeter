@@ -66,11 +66,12 @@ article footer div {
 }
 
 
-@media only screen and (min-width: 1064px){
+@media only screen and (min-width: 1024px){
   .tweet-section{
     display: flex;
     flex-direction: column;
     width: 64%;
     float: right;
+    padding-left: 30px;
   }
 }
