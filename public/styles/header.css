@@ -1,4 +1,4 @@
-.current-user{
+.current-user {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,8 +18,8 @@
   font-size: 1.5em;
 }
 
-@media only screen and (min-width: 1024px){
-  .current-user{
+@media only screen and (min-width: 1024px) {
+  .current-user {
     display: flex;
     flex-direction: column;
     width: 33.3%;
@@ -30,9 +30,8 @@
   }
 
   .username {
-    display: flex;          
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
-
 }

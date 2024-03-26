@@ -1,14 +1,13 @@
-.tweet-section{
+.tweet-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-
 }
 
 .tweet {
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
   border: solid black;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -16,7 +15,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 0 11px 11px grey; 
+  box-shadow: 0 11px 11px grey;
 }
 
 article header {
@@ -65,9 +64,8 @@ article footer div {
   padding-right: 10px;
 }
 
-
-@media only screen and (min-width: 1024px){
-  .tweet-section{
+@media only screen and (min-width: 1024px) {
+  .tweet-section {
     display: flex;
     flex-direction: column;
     width: 64%;

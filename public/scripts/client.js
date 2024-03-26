@@ -11,7 +11,7 @@ $(document).ready(function () {
   const createTweetElement = (tweet) => {
     const { user: { name, handle }, content: { text }, created_at } = tweet
     const timeAgoString = timeago.format(created_at);
-    
+
 
     let $tweet = $(`
       <article class="tweet">
@@ -39,8 +39,8 @@ $(document).ready(function () {
     $tweet.find('.tweet-text').text(text);
     return $tweet;
   }
-/*-------------------Tweet Render Function-------------------*/
-//Step 2 - Take data from loadTweets function and display each tweet
+  /*-------------------Tweet Render Function-------------------*/
+  //Step 2 - Take data from loadTweets function and display each tweet
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -53,12 +53,12 @@ $(document).ready(function () {
     //Prevent regular form submission from happening
     event.preventDefault();
     const inputText = $('#tweet-text');
-    
+
     if (!isTweetValid(inputText.val())) {
       return;
     }
 
-    
+
     let formData = $(this).serialize();
 
     //POST request sending serialized text as data
