@@ -5,11 +5,6 @@ $(document).ready(function () {
     let currentLength = $(this).val().length;
     let remaining = maxLength - currentLength;
 
-    if (currentLength === 1) {
-      console.log("TEST")
-      $('#error-message').slideUp();
-    }
-
     //Check the number of characters left
     $('.counter').text(remaining);
     if (remaining < 15) {
