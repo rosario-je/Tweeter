@@ -30,6 +30,15 @@ main {
   background-color: inherit;
 }
 
+@media screen and (min-width: 1064px) {
+  main {
+    width: 95%;
+  }
+  
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ 

@@ -49,3 +49,13 @@
   padding: 20px;
   font-weight: bolder;
 }
+
+@media only screen and (min-width: 1064px){
+  .new-tweet {
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    float: right;
+    margin-top: 200px;
+  }
+}
