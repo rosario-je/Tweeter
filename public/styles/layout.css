@@ -30,11 +30,10 @@ main {
   background-color: inherit;
 }
 
-@media screen and (min-width: 1064px) {
+@media screen and (min-width: 1024px) {
   main {
     width: 95%;
   }
-  
 }
 
 /*
