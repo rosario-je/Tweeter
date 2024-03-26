@@ -4,6 +4,11 @@ $(document).ready(function() {
     let maxLength = 140;
     let currentLength = $(this).val().length;
     let remaining = maxLength - currentLength;
+     
+    if( $(this).val().length === 1) {
+      console.log("TEST")
+      $('#error-message').slideUp();
+    }
 
     //Check the number of characters left
     $('.counter').text(remaining); 
