@@ -1,7 +1,6 @@
 
 
 /* -----------------------Tweet Checker Function-----------------------*/
-
 function isTweetValid(tweetText) {
   const textLength = tweetText.trim().length;
 
