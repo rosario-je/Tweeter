@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     //Check the number of characters left
     $('.counter').text(remaining);
-    if (remaining < 15) {
+    if (remaining < 0) {
       //Add or remove a class to the counter class to allow conditional CSS Styling
       $('.counter').addClass('counter-red');
     } else {
