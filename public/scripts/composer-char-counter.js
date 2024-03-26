@@ -5,7 +5,7 @@ $(document).ready(function () {
     let currentLength = $(this).val().length;
     let remaining = maxLength - currentLength;
 
-    if ($(this).val().length === 1) {
+    if (currentLength === 1) {
       console.log("TEST")
       $('#error-message').slideUp();
     }
