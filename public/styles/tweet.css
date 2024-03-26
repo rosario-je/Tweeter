@@ -27,6 +27,7 @@ article header {
 .tweet-text {
   padding-top: 10px;
   padding-bottom: 30px;
+  word-wrap: break-word;
 }
 
 .tweet header span {
@@ -71,5 +72,12 @@ article footer div {
     width: 64%;
     float: right;
     padding-left: 30px;
+  }
+
+  .tweet-text{
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    width: 100%;
   }
 }

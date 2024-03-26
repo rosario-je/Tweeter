@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid red;
+  border: 5px solid red;
   padding: 20px;
   font-weight: bolder;
 }
