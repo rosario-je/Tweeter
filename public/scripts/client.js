@@ -7,6 +7,7 @@
 $(document).ready(function () {
 
   /*-------------------Function to create each tweet article-------------------*/
+  //Step 3 - Transform each tweet provided in renderTweets into an article.
   const createTweetElement = (tweet) => {
     const { user: { name, handle }, content: { text }, created_at } = tweet
     const timeAgoString = timeago.format(created_at);
@@ -38,15 +39,14 @@ $(document).ready(function () {
     $tweet.find('.tweet-text').text(text);
     return $tweet;
   }
-
+/*-------------------Tweet Render Function-------------------*/
+//Step 2 - Take data from loadTweets function and display each tweet
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('.tweet-section').prepend($tweet);
     }
   }
-
-
 
   /* ----------------Form's Post request---------------- */
   $('.new-tweet-form').on("submit", function (event) {
@@ -58,6 +58,7 @@ $(document).ready(function () {
       return;
     }
 
+    
     let formData = $(this).serialize();
 
     //POST request sending serialized text as data
@@ -76,6 +77,7 @@ $(document).ready(function () {
   })
 
   /*-------------------Get request function-------------------*/
+  //Step 1 - Fetch the data from /tweets
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
