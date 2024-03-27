@@ -53,6 +53,15 @@ This project demonstrates the use of HTML, CSS, JavaScript (including jQuery), a
 - Compose new tweets using the tweet composer at the top of the page.
 - View tweets posted by other users in the tweet feed.
 
+## Screenshots
+!['Home page - Desktop view'](https://github.com/rosario-je/Tweeter/blob/master/docs/main-page-desktop.png)
+
+!['Home page - Mobile view'](https://github.com/rosario-je/Tweeter/blob/master/docs/main-page-mobile.png)
+
+!['Character limit error - Mobile View'](https://github.com/rosario-je/Tweeter/blob/master/docs/main-page-mobile-error.png)
+
+!['Empty input error - Mobile View'](https://github.com/rosario-je/Tweeter/blob/master/docs/empty-tweet-error.png)
+
 
 ## Acknowledgements
 - Thanks to [FontAwesome](https://fontawesome.com/) for providing the icons used in the project.
