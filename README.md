@@ -53,8 +53,6 @@ This project demonstrates the use of HTML, CSS, JavaScript (including jQuery), a
 - Compose new tweets using the tweet composer at the top of the page.
 - View tweets posted by other users in the tweet feed.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 - Thanks to [FontAwesome](https://fontawesome.com/) for providing the icons used in the project.
