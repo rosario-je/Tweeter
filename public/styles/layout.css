@@ -3,11 +3,6 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-/*---------------Colors---------------*/
-/*---------------User Info---------------*/
-/*---------------Font styles---------------*/
-/*---------------Border styles---------------*/
-/*---------------Spacing---------------*/
 html {
   box-sizing: border-box;
 }
