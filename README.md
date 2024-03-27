@@ -30,6 +30,7 @@ This project demonstrates the use of HTML, CSS, JavaScript (including jQuery), a
 ## Project Structure
 - `index.html`: Main HTML file containing the structure of the web page.
 - `styles/`: Directory containing CSS files for styling the application.
+- `sass/`: Directory containing SCSS files for improved styling
 - `scripts/`: Directory containing JavaScript files for client-side functionality.
   - `client.js`: Contains client-side logic for handling tweet submission, rendering tweets, and interacting with the server.
   - `composer-char-counter.js`: Provides functionality for updating the character counter in the tweet composer.
