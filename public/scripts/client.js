@@ -70,11 +70,18 @@ $(document).ready(function () {
         console.log(response);
         loadTweets()
         //Clear input from text area after submit
+        $('.counter').text(140)
         $('#tweet-text').val('');
+      },
+      error: (jqXHR, textStatus, errorThrown) => {
+        if (jqXHR.status === 400) {
+          displayErrorMessage(jqXHR.responseJSON.error);
+        } else {
+          displayErrorMessage("Failed to post tweet. Please try again.");
+        }
       }
     });
-
-  })
+  });
 
   /*-------------------Get request function-------------------*/
   //Fetch the data from /tweets
@@ -87,6 +94,10 @@ $(document).ready(function () {
         $('.tweet-section').empty();
         renderTweets(res)
       },
+      error: (jqXHR, textStatus, errorThrown) => {
+        console.error("AJAX Error:", textStatus, errorThrown);
+        displayErrorMessage("Failed to load tweets. Please try refreshing.");
+      }
     });
   }
   loadTweets()
