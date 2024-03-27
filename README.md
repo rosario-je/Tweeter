@@ -19,7 +19,8 @@ This project demonstrates the use of HTML, CSS, JavaScript (including jQuery), a
 
 ## Technologies Used
 - HTML
-- CSS (including Normalize.css)
+- CSS
+- SASS
 - JavaScript
 - jQuery
 - AJAX
