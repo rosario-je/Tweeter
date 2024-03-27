@@ -9,7 +9,7 @@ $(document).ready(function () {
   /*-------------------Function to create each tweet article-------------------*/
   //Transform each tweet provided in renderTweets into an article.
   const createTweetElement = (tweet) => {
-    const { user: { name, handle }, content: { text }, created_at } = tweet
+    const { user: { name, handle, avatars }, content: { text }, created_at } = tweet
     const timeAgoString = timeago.format(created_at);
 
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
       <article class="tweet">
           <header>
             <span>
-              <i class="fa-solid fa-user"></i>
+              <img id="user-avatar" src=${avatars} alt="User Avatar">
               <h3>${name}</h3>
             </span>
             <h3>${handle}</h3>
