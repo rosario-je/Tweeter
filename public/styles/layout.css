@@ -3,9 +3,15 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+/*---------------Colors---------------*/
+/*---------------User Info---------------*/
+/*---------------Font styles---------------*/
+/*---------------Border styles---------------*/
+/*---------------Spacing---------------*/
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,7 +21,6 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -24,6 +29,7 @@ body {
   font-optical-sizing: auto;
   font-style: italic;
 }
+
 main {
   width: 90%;
   margin: 0 auto;
@@ -35,7 +41,6 @@ main {
     width: 95%;
   }
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

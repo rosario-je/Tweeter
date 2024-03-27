@@ -1,3 +1,8 @@
+/*---------------Colors---------------*/
+/*---------------User Info---------------*/
+/*---------------Font styles---------------*/
+/*---------------Border styles---------------*/
+/*---------------Spacing---------------*/
 .new-tweet {
   padding-top: 1.5em;
 }
@@ -36,6 +41,7 @@
   background-color: #4056a1;
   padding: 5px 10px;
 }
+
 .counter-red {
   color: red;
 }

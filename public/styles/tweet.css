@@ -1,3 +1,8 @@
+/*---------------Colors---------------*/
+/*---------------User Info---------------*/
+/*---------------Font styles---------------*/
+/*---------------Border styles---------------*/
+/*---------------Spacing---------------*/
 .tweet-section {
   display: flex;
   flex-direction: column;
@@ -52,9 +57,11 @@ article footer div {
 .fa-flag:hover {
   color: orange;
 }
+
 .fa-retweet:hover {
   color: green;
 }
+
 .fa-heart:hover {
   color: red;
 }
@@ -73,8 +80,7 @@ article footer div {
     float: right;
     padding-left: 30px;
   }
-
-  .tweet-text{
+  .tweet-text {
     display: flex;
     flex-direction: column;
     word-wrap: break-word;

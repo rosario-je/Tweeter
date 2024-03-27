@@ -1,10 +1,14 @@
+/*---------------Colors---------------*/
+/*---------------User Info---------------*/
+/*---------------Font styles---------------*/
+/*---------------Border styles---------------*/
+/*---------------Spacing---------------*/
 .current-user {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 120px;
-
   height: 400px;
   width: 100%;
   color: #ffffff;
@@ -28,7 +32,6 @@
     margin-top: 250px;
     margin-left: 30px;
   }
-
   .username {
     display: flex;
     flex-direction: column;
