@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .tweet-section {
   display: flex;
@@ -76,7 +76,7 @@ article footer div {
     padding-left: 30px;
   }
 
-  .tweet-text{
+  .tweet-text {
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
