@@ -16,3 +16,8 @@ function isTweetValid(tweetText) {
   $('#error-message').slideUp();
   return true;
 }
+
+/* -----------------------Error Display Function-----------------------*/
+function displayErrorMessage(message) {
+  return $('#error-message').text(message).slideDown();
+}
