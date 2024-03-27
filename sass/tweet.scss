@@ -1,0 +1,85 @@
+@import 'variables';
+
+.tweet-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: $em-padding;
+  padding-bottom: $em-padding;
+}
+
+.tweet {
+  transition: box-shadow 0.3s;
+  border: solid black;
+  padding-left: $em-padding;
+  padding-right: $em-padding;
+  padding-bottom: $em-padding;
+}
+
+.tweet:hover {
+  box-shadow: 0 11px 11px grey;
+}
+
+article header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-text {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  word-wrap: break-word;
+}
+
+.tweet header span {
+  display: flex;
+}
+
+article footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: $border;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+article footer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fa-flag:hover {
+  color: orange;
+}
+.fa-retweet:hover {
+  color: green;
+}
+.fa-heart:hover {
+  color: red;
+}
+
+.fa-user {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweet-section {
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    float: right;
+    padding-left: 30px;
+  }
+
+  .tweet-text{
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    width: 100%;
+  }
+}

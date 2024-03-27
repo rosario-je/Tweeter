@@ -1,0 +1,38 @@
+/*---------------Colors---------------*/
+$bg-color: #4056a1;
+$text-color: #ffffff;
+$counter-color: red;
+
+/*---------------User Info---------------*/
+$user-bg-img: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+$user-bg-color: #002fa6;  
+
+/*---------------Font styles---------------*/
+$bolded-font: "Bungee", sans-serif;
+$normal-font: "Source Sans 3", sans-serif;
+
+/*---------------Border styles---------------*/
+$border: solid black;
+$error-border: 5px solid red;
+
+/*---------------Spacing---------------*/
+$em-padding: 1.5em;
+$nav-height: 120px;
+$nav-width: 100%;
+
+
+
+export {
+  $bg-color: $bg-color;
+  $text-color: $text-color;
+  $counter-color: $counter-color;
+  $bolded-font: $bolded-font;
+  $normal-font: $normal-font;
+  $border: $border;
+  $error-border: $error-border;
+  $em-padding: $em-padding;
+  $nav-height: $nav-height;
+  $nav-width: $nav-width;
+  $user-bg-color: $user-bg-color;
+  $user-bg-img: $user-bg-img;
+}

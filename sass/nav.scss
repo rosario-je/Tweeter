@@ -1,0 +1,38 @@
+@import 'variables';
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  background-color: $bg-color;
+  color: $text-color;
+
+  &:first-of-type {  
+    @include flex-center; 
+    padding-left: $em-padding;
+    padding-right: $em-padding;
+    font-family: $bolded-font;
+    font-style: normal;
+  }
+
+  div { 
+    @include flex-center; 
+    font-family: $normal-font;
+    font-style: normal;
+  }
+
+  .fa-angle-double-down {  
+    color: orange;
+  }
+}
+
